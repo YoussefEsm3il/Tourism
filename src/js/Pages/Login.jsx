@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import "../../Css/style.css";
+import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <Fragment>
@@ -15,13 +16,13 @@ const Login = () => {
             <input type="password" name required />
             <label>Password</label>
           </div>
-          <a href="#">
+          <Link href="#">
             <span />
             <span />
             <span />
             <span />
             Login
-          </a>
+          </Link>
         </form>
       </div>
     </section>

@@ -1,25 +1,26 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import "../../Css/style.css";
 import Video from "../../assets/Video/EgyTourism.mp4";
 import image from "../../assets/Image/image 1.jpg";
 import airplan from "../../assets/Image/airplane-ticket.png";
-import multimedia from "../../assets/Image/multimedia-player.png";
+// import multimedia from "../../assets/Image/multimedia-player.png";
 import virtual_tour from "../../assets/Image/virtual-tour.png";
 import hieroglyph from "../../assets/Image/hieroglyph.png";
+import Playbtn from "../../assets/Image/play-button.png";
 const Home = () => {
   return (
     <Fragment>
       <div className="header">
         {/* start section 1 */}
-        <main>
+        <main className="main">
           <section>
             <h3>welcome to egypt</h3>
             <h1>
               do come &amp; visit
               <span className="change_content" />
             </h1>
-            <p>"egypt onse is not enough"</p>
+            <p>"You should visit Egypt"</p>
             <Link href="#"  to={'/login'} className="btnone">
               Login
             </Link>
@@ -60,23 +61,32 @@ const Home = () => {
           <div className="text">
             <h1>Our Services</h1>
           </div>
-          <div className="logo">
+          <div className="services">
+            <Link href='#' to={'/discover-egypt'}>
             <div>
-              <img src={hieroglyph} alt />
+
+              <img src={hieroglyph}/>
               <h5>Discover Ancient Egypt</h5>
             </div>
+            </Link>
+            <Link href='#' to={'/recordings'}>
             <div>
-              <img src={virtual_tour} alt />
+
+              <img src={virtual_tour}/>
               <h5>Listen To Voice Records</h5>
             </div>
-            <div>
+            </Link>
+            {/* <div>
               <img src={multimedia} alt />
               <h5>Buy Account and pay money</h5>
-            </div>
+            </div> */}
+            <Link href='' to={'/trips'}>
             <div>
-              <img src={airplan} alt />
+
+              <img src={airplan}/>
               <h5>Reserve Flights and come</h5>
             </div>
+            </Link>
           </div>
         </div>
         {/* end section3 */}
@@ -93,8 +103,8 @@ const Home = () => {
               production and economic resources.
             </p>
             <div className="btn">
-              {/* <img src={image} alt /> */}
-              <Link href="../assets/Video/EgyTourism.mp4">watch video</Link>
+              <img src={Playbtn} alt />
+              <Link href='#' to={'/video'}>watch video</Link>
             </div>
           </div>
         </div>

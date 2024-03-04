@@ -10,6 +10,10 @@ import Footer from './js/Components/Footer';
 import Login from './js/Pages/Login';
 import Rigestar from './js/Pages/Rigestar';
 import Error from './Error';
+import Video from './js/Components/Video';
+import Trips from './js/Pages/Trips';
+import Recordings from './js/Pages/Recordings';
+import DiscoverEgypt from './js/Pages/DiscoverEgypt';
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Rigestar/>}/>
+        <Route path='/trips' element={<Trips/>}/>
+        <Route path='/recordings' element={<Recordings/>}/>
+        <Route path='/discover-egypt' element={<DiscoverEgypt/>}/>
+        <Route path='/video' element={<Video/>  }/>
         <Route path='*' element={<Error/>}/>
       </Routes>
       <Outlet/>

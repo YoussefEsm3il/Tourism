@@ -30,7 +30,7 @@ const Contact = () => {
               </div>
               <div className="sec2contactform">
                 <h3 className="sec2frmtitle">
-                  Want to Know More?? Drop Us a Mail
+                  Want to Know More?? Drop Us Email
                 </h3>
                 <form action>
                   <div className="clearfix">
@@ -63,11 +63,14 @@ const Contact = () => {
                       id
                       cols={30}
                       rows={7}
-                      defaultValue={"Your message here..."}
+                      placeholder="type messege here"
+                      
                     />
                   </div>
                   <div className="clearfix">
-                    <button type="submit" defaultValue="Send" >Send Messege</button>
+                    <button type="submit"
+                     defaultValue="Send"
+                     >Send Messege</button>
                   </div>
                 </form>
               </div>

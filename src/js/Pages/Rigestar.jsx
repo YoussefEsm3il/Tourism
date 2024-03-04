@@ -24,7 +24,7 @@ const Rigestar = () => {
             <label>BirthDay</label>
           </div>
           <div className="user-box">
-            <input type="" name required />
+            <input type="password" name required />
             <label>Password</label>
           </div>
           

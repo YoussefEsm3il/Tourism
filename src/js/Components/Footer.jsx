@@ -54,12 +54,12 @@ const Footer = () => {
             <h3>working days:</h3>
             <div>
               <img src={work} alt="work" />
-              <p>Saturday To Thursday 8 AM - 4:30 PM</p>
+              <p>Saturday To Thursday 8 AM - 5 PM</p>
             </div>
             <h3>Vacations:</h3>
             <div>
               <img src={day} alt="day" />
-              <p>Friday &amp; Official Holidays</p>
+              <p>Friday Official Holidays</p>
             </div>
           </div>
         </div>
