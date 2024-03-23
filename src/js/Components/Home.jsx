@@ -1,16 +1,20 @@
 import React, { Fragment } from "react";
-import { Link, Route } from "react-router-dom";
+import { Link} from "react-router-dom";
 import "../../Css/style.css";
 import Video from "../../assets/Video/EgyTourism.mp4";
 import image from "../../assets/Image/image 1.jpg";
-import airplan from "../../assets/Image/airplane-ticket.png";
-// import multimedia from "../../assets/Image/multimedia-player.png";
-import virtual_tour from "../../assets/Image/virtual-tour.png";
-import hieroglyph from "../../assets/Image/hieroglyph.png";
 import Playbtn from "../../assets/Image/play-button.png";
+import Footer from "./Footer";
+import Navbar from '../Components/Navbar'
+import { PiAirplaneTakeoff } from "react-icons/pi";
+import { IoRecordingOutline } from "react-icons/io5";
+import { GiEgyptianTemple } from "react-icons/gi";
+
+
 const Home = () => {
   return (
     <Fragment>
+    <Navbar/>
       <div className="header">
         {/* start section 1 */}
         <main className="main">
@@ -21,17 +25,11 @@ const Home = () => {
               <span className="change_content" />
             </h1>
             <p>"You should visit Egypt"</p>
-            <Link href="#"  to={'/login'} className="btnone">
-              Login
-            </Link>
-            <Link href="#" to={'/register'} className="btntwo">
-              Register
-            </Link>
           </section>
         </main>
         {/* end section 1 */}
         {/* start section 2 */}
-        <div className="section2">
+        <div className="section2" id='Discover'>
           <div className="ads">ads</div>
           <div className="img">
             <img src={image} alt="image" />
@@ -57,38 +55,7 @@ const Home = () => {
         </div>
         {/* end section2 */}
         {/* start section3 */}
-        <div className="section3">
-          <div className="text">
-            <h1>Our Services</h1>
-          </div>
-          <div className="services">
-            <Link href='#' to={'/discover-egypt'}>
-            <div>
-
-              <img src={hieroglyph}/>
-              <h5>Discover Ancient Egypt</h5>
-            </div>
-            </Link>
-            <Link href='#' to={'/recordings'}>
-            <div>
-
-              <img src={virtual_tour}/>
-              <h5>Listen To Voice Records</h5>
-            </div>
-            </Link>
-            {/* <div>
-              <img src={multimedia} alt />
-              <h5>Buy Account and pay money</h5>
-            </div> */}
-            <Link href='' to={'/trips'}>
-            <div>
-
-              <img src={airplan}/>
-              <h5>Reserve Flights and come</h5>
-            </div>
-            </Link>
-          </div>
-        </div>
+        
         {/* end section3 */}
         {/* start section4 */}
         <div className="section4">
@@ -104,13 +71,49 @@ const Home = () => {
             </p>
             <div className="btn">
               <img src={Playbtn} alt />
-              <Link href='#' to={'/video'}>watch video</Link>
+              <Link href="#" to={"/video"}>
+                watch video
+              </Link>
             </div>
           </div>
         </div>
+
+        
+        <div className="section3"  id="Services">
+          <div className="text">
+            <h1>Our Services</h1>
+          </div>
+          <div className="services">
+            <Link href="#" to={"/user/discover-egypt"}>
+              <div>
+              <GiEgyptianTemple   className="icons-home"/>
+
+                <h5>Discover Ancient Egypt</h5>
+              </div>
+            </Link>
+            <Link href="#" to={"/user/recordings"}>
+              <div>
+              <IoRecordingOutline  className="icons-home"/>
+
+                <h5>Listen To Voice Records</h5>
+              </div>
+            </Link>
+            {/* <div>
+              <img src={multimedia} alt />
+              <h5>Buy Account and pay money</h5>
+            </div> */}
+            <Link href="#" to={"/user/trips"}>
+              <div>
+                <PiAirplaneTakeoff className="icons-home"/>
+                <h5>Reserve Flights and come</h5>
+              </div>
+            </Link>
+          </div>
+        </div>
+        
         {/* end section4 */}
         {/* start section5 */}
-        <div className="section5">
+        <div className="section5" id="Gallery">
           <h2>Gallery</h2>
           <div className="photo">
             {/* <img src={images} alt />x` */}
@@ -121,11 +124,99 @@ const Home = () => {
             <img src="image/image6.webp" alt />
             <img src="image/image7.webp" alt />
             <img src="image/image8.webp" alt /> */}
+          </div>{/* end section5 */}
+        </div>
+        <div className="f-page" id='about'>
+        <h2>About</h2>
+        <div className="cards">
+          <div className="c-about">
+            <p>
+              EgyTourism is web application that display information and
+              historical details about monuments and Artifacts via panoramic
+              photos, 3D Picture, videos
+            </p>
           </div>
         </div>
-        {/* end section5 */}
       </div>
 
+      <div className="container section6" id='contact'>
+        <div className="innerwrap">
+          <section className="section1 clearfix">
+            <div className="textcenter">
+              <span className="shtext">Contact Us</span>
+              <span className="seperator" />
+              <h1>Drop Us a Mail</h1>
+            </div>
+          </section>
+          <section className="section2 clearfix">
+            <div className="col2 column2 last">
+              <div className="sec2innercont">
+                <div className="sec2addr">
+                  <p>
+                    <span className="collig">Address :</span>6 O'ctober City
+                  </p>
+                  <p>
+                    <span className="collig">Phone :</span> +02 011 434 864 55
+                  </p>
+                  <p>
+                    <span className="collig">Email :</span>{" "}
+                    ismailyoussef209@gmail.com
+                  </p>
+                </div>
+              </div>
+              <div className="sec2contactform">
+                <h3 className="sec2frmtitle">
+                  Want to Know More?? Drop Us Email
+                </h3>
+                <form action>
+                  <div className="clearfix">
+                    <input
+                      className="col2 first"
+                      type="text"
+                      placeholder="FirstName"
+                    />
+                    <input
+                      className="col2 last"
+                      type="text"
+                      placeholder="LastName"
+                    />
+                  </div>
+                  <div className="clearfix">
+                    <input
+                      className="col2 first"
+                      type="Email"
+                      placeholder="Email"
+                    />
+                    <input
+                      className="col2 last"
+                      type="text"
+                      placeholder="Contact Number"
+                    />
+                  </div>
+                  <div className="clearfix">
+                    <textarea
+                      name="textarea"
+                      id
+                      cols={30}
+                      rows={7}
+                      placeholder="type messege here"
+                      
+                    />
+                  </div>
+                  <div className="clearfix">
+                    <button type="submit"
+                     defaultValue="Send"
+                     >Send Messege</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      </div>
+      <Footer />
     </Fragment>
   );
 };
